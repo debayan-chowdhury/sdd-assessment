@@ -1,0 +1,53 @@
+# ==========================================
+# INT Next.js AI Agent Ignore File
+# ==========================================
+
+# 1. Heavy Dependencies (Massive token sinks)
+node_modules/
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# 2. Build Artifacts & Caches (Compiled code is useless for AI context)
+.next/
+out/
+build/
+dist/
+coverage/
+.turbo/
+.vercel/
+.cache/
+tsconfig.tsbuildinfo
+next-env.d.ts
+
+# 3. Environment Variables & Secrets (Security boundaries)
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+secrets/
+
+# 4. Logs & Local Databases (Noise that confuses the AI)
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.sqlite
+*.db
+
+# 5. Media & Static Assets (Unreadable binary data)
+public/
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.mp4
+*.woff
+*.woff2
+
+# 6. AI Audit Trail (Prevents recursive reading)
+.ai-context/prompt_history.md
